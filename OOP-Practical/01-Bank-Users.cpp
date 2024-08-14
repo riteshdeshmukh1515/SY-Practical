@@ -5,16 +5,24 @@ class Bank {
 public:
     int accno;
     double balance;
-    char name[100];
+    string name;
     void accept();
     void deposit(int accno, int amount);
     void withdraw(int accno, int amount);
-    void display(int accno); 
+    void display(); 
+    Bank();
 } a[100];
 
-int n = 0; 
+int n ; 
+ Bank::Bank()
+{
+    accno=0;
+    balance=0;
+    name = "ABC";
+}
 
-void Bank::accept() {
+void Bank::accept() 
+{
     cout << "Enter name of the depositor: ";
     cin >> name;
     cout << "Enter account number: ";
@@ -55,17 +63,18 @@ void Bank::withdraw(int accno, int amount) {
     cout << "Account not found.\n" ;
 }
 
-void Bank::display(int accno) {
-    for (int i = 0; i < n; i++) {
-        if (a[i].accno == accno) {
-            cout << "\nName: " << a[i].name << "\tAccount Number: " << a[i].accno << "\tBalance: " << a[i].balance ;
+void Bank::display() {
+   
+    
+        
+            cout <<"\n" << name << "\t" << accno << "\t " << balance ;
             return;
-        }
-    }
-    cout << "Account not found.\n" ;
+        
+    
 }
 
 int main() {
+    
     int choice;
 
     cout << "Enter the number of user data you want to insert:\n ";
@@ -109,10 +118,13 @@ int main() {
                 break;
             }
             case 3: {
-                int accno;
-                cout << "Enter account number: ";
-                cin >> accno;
-                a[0].display(accno); 
+                
+                 cout << "Enter the number of user data you want to display:\n ";
+                 cin >> n;
+                 cout<<"\n"<<"NAME\tACC NO\tBALANCE";
+                 for (int i = 0; i < n; i++) {
+                       a[i].display(); 
+                 }
                 break;
             }
             case 4:
