@@ -69,7 +69,7 @@ void books :: buy(int n)
             f1=1;
             total=b[i].price*cp;
             b[i].sp-=cp;
-            cout<<"total cost is"<<total;
+            cout<<"Total cost is: "<<total;
 
            }
            break;
@@ -111,6 +111,7 @@ int main()
                 break;
 
             case 2:
+                cout<<"\nTittle\tAuther\tPubl\tPrice\tsp";
                 for (int i = 0; i <10; i++) {
                     b[i].display();
                 }
