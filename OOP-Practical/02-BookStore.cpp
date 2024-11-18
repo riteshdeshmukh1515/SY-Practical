@@ -2,7 +2,6 @@
 #include<cstring>
 using namespace std;
 int n;
-
 class books{
     private:
     char *tt;
