@@ -2,8 +2,6 @@
 
 /* Implement the c++ program to convert Infix expression into Postfix expression using stack. */
 
-
-
 #include <iostream>
 #include <stack>
 #include <cstring>
