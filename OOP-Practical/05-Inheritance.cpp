@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 // BASE CLASS STUDENT
 class Student {
 protected:
