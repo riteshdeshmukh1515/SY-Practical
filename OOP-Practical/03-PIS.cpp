@@ -6,7 +6,6 @@ int i, n;
 class PIS {
     public:static int cnt;
 
-    
     int pn, cn, wt, ht, dob;
     char *name, *add, *dln, bg[3];
 
